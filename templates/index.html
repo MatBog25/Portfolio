@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
-{% block title %}Portfolio - Full Stack Developer{% endblock %}
-{% block description %}Profesjonalne portfolio Full Stack Developera specjalizującego się w nowoczesnych technologiach webowych{% endblock %}
+{% block title %}Portfolio - Python Developer / Analityk danych{% endblock %}
+{% block description %}Portfolio Python Developer / Analityk Danych{% endblock %}
 
 {% block extra_head %}
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -17,16 +17,7 @@
     <!-- Hero Content -->
     <div class="relative z-10 container-custom text-center">
         <div class="animate-fade-in">
-            <!-- Profile Image -->
-            <div class="mb-8" data-aos="zoom-in" data-aos-delay="200">
-                <div class="w-32 h-32 mx-auto mb-6 relative">
-                    <div class="w-full h-full rounded-full bg-gradient-to-r from-primary-400 to-primary-600 p-1 animate-pulse-slow">
-                        <div class="w-full h-full rounded-full bg-white dark:bg-gray-900 flex items-center justify-center">
-                            <i class="fas fa-user text-4xl text-gray-400 dark:text-gray-300"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             
             <!-- Main Heading -->
             <h1 class="text-5xl md:text-7xl font-bold mb-6 font-display" data-aos="fade-up" data-aos-delay="300">
@@ -35,14 +26,14 @@
             
             <!-- Typing Animation -->
             <div class="text-2xl md:text-3xl text-gray-600 dark:text-gray-400 mb-8 h-12" data-aos="fade-up" data-aos-delay="500">
-                <span id="typing-text" data-text="Data Scientist & AI Developer"></span>
+                <span id="typing-text" data-text="Python Developer & Analityk Danych"></span>
                 <span class="animate-pulse">|</span>
             </div>
             
             <!-- Description -->
             <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed" data-aos="fade-up" data-aos-delay="700">
-                Analityk danych i Data Scientist w Drtusz. Tworzę agentów AI, systemy RAG, 
-                integracje z LLM i rozwiązania do automatycznego generowania obrazów.
+                Python Developer i Analityk Danych w Drtusz. Tworzę oprogramowanie, 
+                integruję oraz udostępniam API, tworzę agentów AI i analizuję dane.
             </p>
             
             <!-- CTA Buttons -->
@@ -55,26 +46,30 @@
                     <i class="fas fa-user mr-2"></i>
                     O mnie
                 </a>
+                <a href="{{ url_for('static', filename='CV python.pdf') }}" target="_blank" class="btn-secondary">
+                    <i class="fas fa-download mr-2"></i>
+                    Pobierz CV
+                </a>
             </div>
             
             <!-- Social Links -->
             <div class="flex justify-center space-x-6 mt-12" data-aos="fade-up" data-aos-delay="1100">
-                <a href="https://github.com/yourusername" target="_blank" class="text-2xl text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 hover:scale-110" title="GitHub">
+                <a href="https://github.com/MatBog25" target="_blank" class="text-2xl text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 hover:scale-110" title="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://linkedin.com/in/yourusername" target="_blank" class="text-2xl text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 hover:scale-110" title="LinkedIn">
+                <a href="https://www.linkedin.com/in/mateusz-boguszewski-ab1728294/" target="_blank" class="text-2xl text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 hover:scale-110" title="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="mailto:your.email@example.com" class="text-2xl text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 hover:scale-110" title="Email">
+                <a href="mailto:matek002003@gmail.com" class="text-2xl text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 hover:scale-110" title="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
         </div>
         
         <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 scroll-indicator">
+        <a href="#skills-section" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 scroll-indicator">
             <i class="fas fa-chevron-down text-2xl text-gray-400"></i>
-        </div>
+        </a>
     </div>
 </section>
 
@@ -83,10 +78,10 @@
     <div class="container-custom">
         <div class="text-center mb-16">
             <h2 class="text-4xl md:text-5xl font-bold mb-6 font-display" data-aos="fade-up">
-                Technologie w <span class="gradient-text">Drtusz</span>
+                Technologie w <span class="gradient-text">mojej pracy</span>
             </h2>
             <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-                Oto technologie, z którymi pracuję na co dzień jako Data Scientist
+                Oto technologie, z którymi pracuję na co dzień jako Python Developer / Analityk Danych
             </p>
         </div>
         
@@ -178,8 +173,15 @@
                 <div class="space-y-4">
                     <div class="skill-item">
                         <div class="flex justify-between mb-2">
-                            <span>Java & C++</span>
-                            <span class="text-sm text-gray-500">65%</span>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-bar bg-gray-200 dark:bg-dark-700 rounded-full h-2" data-level="65">
+                            <div class="skill-fill bg-gradient-to-r from-primary-500 to-primary-600 h-2 rounded-full transition-all duration-1000 ease-out" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="flex justify-between mb-2">
+                            <span>R</span>
                         </div>
                         <div class="skill-bar bg-gray-200 dark:bg-dark-700 rounded-full h-2" data-level="65">
                             <div class="skill-fill bg-gradient-to-r from-primary-500 to-primary-600 h-2 rounded-full transition-all duration-1000 ease-out" style="width: 0%"></div>
@@ -211,35 +213,89 @@
                 
                 <!-- Experience Item 1 -->
                 <div class="relative flex items-start mb-12 timeline-item" data-aos="fade-right" data-aos-delay="300">
-                    <div class="flex-shrink-0 w-16 h-16 timeline-number rounded-full flex items-center justify-center text-white font-bold text-lg">
-                        1
+                    <div class="flex-shrink-0 w-16 h-16 bg-primary-600 hover:bg-primary-700 rounded-full flex items-center justify-center text-white shadow-xl border-4 border-white dark:border-dark-800 transition-all duration-300">
+                        <i class="fas fa-briefcase text-xl"></i>
                     </div>
                     <div class="ml-8 card p-6 flex-grow">
                         <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                            <h3 class="text-xl font-bold">Data Scientist & Analityk Danych</h3>
+                            <h3 class="text-xl font-bold">Python Developer / Analityk Danych</h3>
                             <span class="text-sm text-primary-600 font-medium">Październik 2024 - Obecnie</span>
                         </div>
                         <h4 class="text-lg text-gray-600 dark:text-gray-400 mb-3">Drtusz</h4>
                         <p class="text-gray-600 dark:text-gray-400 mb-4">
-                            Moja pierwsza praca komercyjna! Tworzę agentów AI z wykorzystaniem różnych LLM, 
-                            implementuję systemy RAG, generuję artykuły AI oraz integruję rozwiązania ze Slackiem i innymi platformami.
+                            Tworzę dashboardy, integruję oraz udostępniam API, generuję artykuły AI oraz integruję rozwiązania ze Slackiem i innymi platformami.
                         </p>
                         <div class="flex flex-wrap gap-2">
                             <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">FastAPI</span>
                             <span class="tech-tag">LangChain</span>
                             <span class="tech-tag">OpenAI</span>
-                            <span class="tech-tag">RAG</span>
+                            <span class="tech-tag">RAG</span> 
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Git</span>
                             <span class="tech-tag">Slack API</span>
                             <span class="tech-tag">Docker</span>
                         </div>
                     </div>
                 </div>
+
+                <!-- Experience Item 2 -->
+                <div class="relative flex items-start mb-12 timeline-item" data-aos="fade-right" data-aos-delay="400">
+                    <div class="flex-shrink-0 w-16 h-16 bg-primary-600 hover:bg-primary-700 rounded-full flex items-center justify-center text-white shadow-xl border-4 border-white dark:border-dark-800 transition-all duration-300">
+                        <i class="fas fa-chalkboard-teacher text-xl"></i>
+                    </div>
+                    <div class="ml-8 card p-6 flex-grow">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                            <h3 class="text-xl font-bold">Prowadzenie zajęć</h3>
+                            <span class="text-sm text-primary-600 font-medium">Październik 2022 - Czerwiec 2024</span>
+                        </div>
+                        <h4 class="text-lg text-gray-600 dark:text-gray-400 mb-3">MISJA ROBOTYKA</h4>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Prowadzenie zajęć z programowania w Pythonie dla uczniów szkół podstawowych. 
+                            Uczenie podstaw programowania i logicznego myślenia poprzez interaktywne ćwiczenia.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Edukacja</span>
+                            <span class="tech-tag">Programowanie</span>
+                            <span class="tech-tag">Pedagogika</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 3 -->
+                <div class="relative flex items-start mb-12 timeline-item" data-aos="fade-right" data-aos-delay="500">
+                    <div class="flex-shrink-0 w-16 h-16 bg-green-600 hover:bg-green-700 rounded-full flex items-center justify-center text-white shadow-xl border-4 border-white dark:border-dark-800 transition-all duration-300">
+                        <i class="fas fa-graduation-cap text-xl"></i>
+                    </div>
+                    <div class="ml-8 card p-6 flex-grow">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                            <h3 class="text-xl font-bold">Staż Python Developer</h3>
+                            <span class="text-sm text-green-600 font-medium">Lipiec - Sierpień 2022</span>
+                        </div>
+                        <h4 class="text-lg text-gray-600 dark:text-gray-400 mb-3">Pierwsze doświadczenie komercyjne</h4>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Pierwszy staż w roli Python Developera. Praca z frameworkiem Django, językiem
+                            JavaScript, Python oraz z MQTT. Zdobycie pierwszego doświadczenia komercyjnego.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">MQTT</span>
+                        </div>
+                    </div>
+                </div>
                 
                 <!-- Education -->
-                <div class="relative flex items-start mb-12 timeline-item" data-aos="fade-right" data-aos-delay="400">
-                    <div class="flex-shrink-0 w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
-                        🎓
+                <div class="relative flex items-start mb-12 timeline-item" data-aos="fade-right" data-aos-delay="600">
+                    <div class="flex-shrink-0 w-16 h-16 bg-green-600 hover:bg-green-700 rounded-full flex items-center justify-center text-white shadow-xl border-4 border-white dark:border-dark-800 transition-all duration-300">
+                        <i class="fas fa-university text-xl"></i>
                     </div>
+                
                     <div class="ml-8 card p-6 flex-grow">
                         <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                             <h3 class="text-xl font-bold">Magister Informatyki</h3>
@@ -247,7 +303,7 @@
                         </div>
                         <h4 class="text-lg text-gray-600 dark:text-gray-400 mb-3">Uniwersytet w Białymstoku</h4>
                         <p class="text-gray-600 dark:text-gray-400 mb-4">
-                            Ukończone studia magisterskie na kierunku Informatyka. Specjalizacja w obszarze 
+                            Ukończone studia magisterskie na kierunku Informatyka z oceną 5. Specjalizacja w obszarze 
                             programowania aplikacji, algorytmów, sztucznej inteligencji i analizy danych.
                         </p>
                         <div class="flex flex-wrap gap-2">
@@ -263,6 +319,161 @@
     </div>
 </section>
 
+<!-- Projects Preview Section -->
+<section class="section-padding bg-white dark:bg-dark-900">
+    <div class="container-custom">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 font-display" data-aos="fade-up">
+                Moje <span class="gradient-text">projekty</span>
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Wybrane projekty, które najlepiej przedstawiają moje umiejętności.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {% for project in projects[:3] %}
+            <div class="card group" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+                <!-- Project Image -->
+                <div class="relative overflow-hidden rounded-t-xl">
+                    <div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900 dark:to-primary-800 flex items-center justify-center">
+                        <i class="fas fa-code text-4xl text-primary-600 dark:text-primary-400"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                        <div class="flex space-x-4">
+                            {% if project.demo %}
+                            <a href="{{ project.demo }}" target="_blank" class="bg-white text-primary-600 p-3 rounded-full shadow-lg hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            {% endif %}
+                            {% if project.github %}
+                            <a href="{{ project.github }}" target="_blank" class="bg-white text-gray-800 p-3 rounded-full shadow-lg hover:scale-110 transition-transform duration-300">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Content -->
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
+                        {{ project.title }}
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                        {{ project.description }}
+                    </p>
+                    
+                    <!-- Technologies -->
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        {% for tech in project.technologies %}
+                        <span class="tech-tag">
+                            {{ tech }}
+                        </span>
+                        {% endfor %}
+                    </div>
+                    
+                    <!-- Project Links -->
+                    <div class="flex space-x-3">
+                        {% if project.demo %}
+                        <a href="{{ project.demo }}" target="_blank" 
+                           class="flex-1 bg-primary-600 hover:bg-primary-700 text-white text-center py-2 px-4 rounded-lg transition-colors duration-300 text-sm font-medium">
+                            <i class="fas fa-eye mr-1"></i>
+                            Demo
+                        </a>
+                        {% endif %}
+                        {% if project.github %}
+                        <a href="{{ project.github }}" target="_blank" 
+                           class="flex-1 border border-gray-300 dark:border-dark-600 hover:bg-gray-50 dark:hover:bg-dark-700 text-gray-700 dark:text-gray-300 text-center py-2 px-4 rounded-lg transition-colors duration-300 text-sm font-medium">
+                            <i class="fab fa-github mr-1"></i>
+                            Kod
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <!-- See All Projects Button -->
+        <div class="text-center" data-aos="fade-up" data-aos-delay="500">
+            <a href="{{ url_for('projects') }}" class="btn-primary">
+                <i class="fas fa-folder-open mr-2"></i>
+                Zobacz wszystkie projekty
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- About Me Preview Section -->
+<section class="section-padding bg-gray-50 dark:bg-dark-800">
+    <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 font-display" data-aos="fade-up">
+                    O <span class="gradient-text">mnie</span>
+                </h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400" data-aos="fade-up" data-aos-delay="200">
+                    Poznaj moją historię i drogę do Python Developera
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Początki</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                        Moja przygoda z programowaniem i data science zaczęła się około 2018 roku, kiedy po raz pierwszy 
+                        spotkałem się z Pythonem i bibliotekami do analizy danych. Pandas, NumPy, Matplotlib - 
+                        każda z nich otwierała przede mną nowe możliwości.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Pierwsze projekty to były proste analizy danych z Excela, 
+                        ale szybko zrozumiałem, że data science to nie tylko narzędzie - to sposób odkrywania prawdy ukrytej w danych.
+                    </p>
+                </div>
+                <div class="card p-6 bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900 dark:to-primary-800" data-aos="fade-left">
+                    <i class="fas fa-brain text-4xl text-primary-600 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Nauka we własnym zakresie</h4>
+                    <p class="text-gray-700 dark:text-gray-300">Python & AI</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">2022-2025</p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-16">
+
+                <div class="order-1 md:order-2" data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-4">Wejście w świat AI</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                        W październiku 2024 otrzymałem swoją pierwszą pracę jako Python Developer / Analityk Danych w Drtusz! 
+                        To doświadczenie pokazało mi, jak fascynujące jest tworzenie oprogramowania
+                        i integracji z różnymi modelami LLM lub API.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Każdego dnia pracuję z nowoczesnymi technologiami AI, tworzę dashboardy, integruje i udostępniam API, tworzę agentów AI,
+                        integruję ze Slackiem i innymi platformami. To jest dopiero początek mojej 
+                        profesjonalnej kariery w świecie IT.
+                    </p>
+                    <br>
+                    <div class="card p-6 bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900 dark:to-primary-800 order-2 md:order-1" data-aos="fade-right">
+                        <i class="fas fa-briefcase text-4xl text-primary-600 mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2">Pierwsza praca</h4>
+                        <p class="text-gray-700 dark:text-gray-300">Python Developer / Analityk Danych w Drtusz</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Python + Flask + AI + LLM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Learn More Button -->
+            <div class="text-center" data-aos="fade-up" data-aos-delay="500">
+                <a href="{{ url_for('about') }}" class="btn-secondary">
+                    <i class="fas fa-user mr-2"></i>
+                    Dowiedz się o mnie więcej
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- CTA Section -->
 <section class="section-padding cta-section">
     <div class="container-custom text-center relative z-10">
@@ -270,7 +481,7 @@
             Zainteresowany współpracą?
         </h2>
         <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="200">
-            Jestem otwarty na nowe projekty i wyzwania. Sprawdź moje portfolio lub skontaktuj się ze mną.
+            Jestem otwarty na nowe projekty i wyzwania. Sprawdź moje portfolio i skontaktuj się ze mną.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center" data-aos="fade-up" data-aos-delay="400">
             <a href="{{ url_for('projects') }}" class="btn-primary">
@@ -280,6 +491,10 @@
             <a href="{{ url_for('contact') }}" class="btn-secondary">
                 <i class="fas fa-envelope mr-2"></i>
                 Skontaktuj się
+            </a>
+            <a href="{{ url_for('static', filename='CV python.pdf') }}" target="_blank" class="btn-secondary">
+                <i class="fas fa-file-pdf mr-2"></i>
+                Pobierz CV
             </a>
         </div>
     </div>
