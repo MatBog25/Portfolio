@@ -1,0 +1,287 @@
+{% extends "base.html" %}
+
+{% block title %}Portfolio - Full Stack Developer{% endblock %}
+{% block description %}Profesjonalne portfolio Full Stack Developera specjalizującego się w nowoczesnych technologiach webowych{% endblock %}
+
+{% block extra_head %}
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden animated-bg">
+    
+    <!-- Particles Canvas -->
+    <canvas id="particles-canvas" class="absolute inset-0 opacity-30 pointer-events-none z-0"></canvas>
+    
+    <!-- Hero Content -->
+    <div class="relative z-10 container-custom text-center">
+        <div class="animate-fade-in">
+            <!-- Profile Image -->
+            <div class="mb-8" data-aos="zoom-in" data-aos-delay="200">
+                <div class="w-32 h-32 mx-auto mb-6 relative">
+                    <div class="w-full h-full rounded-full bg-gradient-to-r from-primary-400 to-primary-600 p-1 animate-pulse-slow">
+                        <div class="w-full h-full rounded-full bg-white dark:bg-gray-900 flex items-center justify-center">
+                            <i class="fas fa-user text-4xl text-gray-400 dark:text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Main Heading -->
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 font-display" data-aos="fade-up" data-aos-delay="300">
+                Cześć, jestem <span class="gradient-text">Mateusz</span>
+            </h1>
+            
+            <!-- Typing Animation -->
+            <div class="text-2xl md:text-3xl text-gray-600 dark:text-gray-400 mb-8 h-12" data-aos="fade-up" data-aos-delay="500">
+                <span id="typing-text" data-text="Data Scientist & AI Developer"></span>
+                <span class="animate-pulse">|</span>
+            </div>
+            
+            <!-- Description -->
+            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed" data-aos="fade-up" data-aos-delay="700">
+                Analityk danych i Data Scientist w Drtusz. Tworzę agentów AI, systemy RAG, 
+                integracje z LLM i rozwiązania do automatycznego generowania obrazów.
+            </p>
+            
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center" data-aos="fade-up" data-aos-delay="900">
+                <a href="{{ url_for('projects') }}" class="btn-primary">
+                    <i class="fas fa-code mr-2"></i>
+                    Moje projekty
+                </a>
+                <a href="{{ url_for('about') }}" class="btn-secondary">
+                    <i class="fas fa-user mr-2"></i>
+                    O mnie
+                </a>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="flex justify-center space-x-6 mt-12" data-aos="fade-up" data-aos-delay="1100">
+                <a href="https://github.com/yourusername" target="_blank" class="text-2xl text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 hover:scale-110" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank" class="text-2xl text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 hover:scale-110" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:your.email@example.com" class="text-2xl text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 hover:scale-110" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 scroll-indicator">
+            <i class="fas fa-chevron-down text-2xl text-gray-400"></i>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills-section" class="section-padding bg-white dark:bg-dark-900">
+    <div class="container-custom">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 font-display" data-aos="fade-up">
+                Technologie w <span class="gradient-text">Drtusz</span>
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Oto technologie, z którymi pracuję na co dzień jako Data Scientist
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Data Science & ML -->
+            <div class="card p-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-chart-line text-2xl text-primary-600 mr-3"></i>
+                    <h3 class="text-xl font-bold">Data Science & ML</h3>
+                </div>
+                <div class="space-y-4">
+                    <div class="skill-item">
+                        <div class="flex justify-between mb-2">
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-bar bg-gray-200 dark:bg-dark-700 rounded-full h-2" data-level="85">
+                            <div class="skill-fill bg-gradient-to-r from-primary-500 to-primary-600 h-2 rounded-full transition-all duration-1000 ease-out" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="flex justify-between mb-2">
+                            <span>Pandas & Scikit-learn</span>
+                        </div>
+                        <div class="skill-bar bg-gray-200 dark:bg-dark-700 rounded-full h-2" data-level="80">
+                            <div class="skill-fill bg-gradient-to-r from-primary-500 to-primary-600 h-2 rounded-full transition-all duration-1000 ease-out" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- AI & LLM -->
+            <div class="card p-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-robot text-2xl text-primary-600 mr-3"></i>
+                    <h3 class="text-xl font-bold">AI & LLM</h3>
+                </div>
+                <div class="space-y-4">
+                    <div class="skill-item">
+                        <div class="flex justify-between mb-2">
+                            <span>LangChain & RAG</span>
+                        </div>
+                        <div class="skill-bar bg-gray-200 dark:bg-dark-700 rounded-full h-2" data-level="80">
+                            <div class="skill-fill bg-gradient-to-r from-primary-500 to-primary-600 h-2 rounded-full transition-all duration-1000 ease-out" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="flex justify-between mb-2">
+                            <span>OpenAI API</span>
+                        </div>
+                        <div class="skill-bar bg-gray-200 dark:bg-dark-700 rounded-full h-2" data-level="85">
+                            <div class="skill-fill bg-gradient-to-r from-primary-500 to-primary-600 h-2 rounded-full transition-all duration-1000 ease-out" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- DevOps & Integrations -->
+            <div class="card p-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-cogs text-2xl text-primary-600 mr-3"></i>
+                    <h3 class="text-xl font-bold">DevOps & API</h3>
+                </div>
+                <div class="space-y-4">
+                    <div class="skill-item">
+                        <div class="flex justify-between mb-2">
+                            <span>Docker & Git</span>
+                        </div>
+                        <div class="skill-bar bg-gray-200 dark:bg-dark-700 rounded-full h-2" data-level="75">
+                            <div class="skill-fill bg-gradient-to-r from-primary-500 to-primary-600 h-2 rounded-full transition-all duration-1000 ease-out" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="flex justify-between mb-2">
+                            <span>Flask & Slack API</span>
+                        </div>
+                        <div class="skill-bar bg-gray-200 dark:bg-dark-700 rounded-full h-2" data-level="75">
+                            <div class="skill-fill bg-gradient-to-r from-primary-500 to-primary-600 h-2 rounded-full transition-all duration-1000 ease-out" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Technologies -->
+            <div class="card p-6" data-aos="fade-up" data-aos-delay="600">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-code text-2xl text-primary-600 mr-3"></i>
+                    <h3 class="text-xl font-bold">Inne technologie</h3>
+                </div>
+                <div class="space-y-4">
+                    <div class="skill-item">
+                        <div class="flex justify-between mb-2">
+                            <span>Java & C++</span>
+                            <span class="text-sm text-gray-500">65%</span>
+                        </div>
+                        <div class="skill-bar bg-gray-200 dark:bg-dark-700 rounded-full h-2" data-level="65">
+                            <div class="skill-fill bg-gradient-to-r from-primary-500 to-primary-600 h-2 rounded-full transition-all duration-1000 ease-out" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section class="section-padding bg-gray-50 dark:bg-dark-800">
+    <div class="container-custom">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 font-display" data-aos="fade-up">
+                Moje <span class="gradient-text">doświadczenie</span>
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Przegląd mojej ścieżki zawodowej i kluczowych projektów
+            </p>
+        </div>
+        
+        <div class="max-w-4xl mx-auto">
+            <!-- Timeline -->
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-primary-200 dark:bg-primary-800"></div>
+                
+                <!-- Experience Item 1 -->
+                <div class="relative flex items-start mb-12 timeline-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="flex-shrink-0 w-16 h-16 timeline-number rounded-full flex items-center justify-center text-white font-bold text-lg">
+                        1
+                    </div>
+                    <div class="ml-8 card p-6 flex-grow">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                            <h3 class="text-xl font-bold">Data Scientist & Analityk Danych</h3>
+                            <span class="text-sm text-primary-600 font-medium">Październik 2024 - Obecnie</span>
+                        </div>
+                        <h4 class="text-lg text-gray-600 dark:text-gray-400 mb-3">Drtusz</h4>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Moja pierwsza praca komercyjna! Tworzę agentów AI z wykorzystaniem różnych LLM, 
+                            implementuję systemy RAG, generuję artykuły AI oraz integruję rozwiązania ze Slackiem i innymi platformami.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">OpenAI</span>
+                            <span class="tech-tag">RAG</span>
+                            <span class="tech-tag">Slack API</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Education -->
+                <div class="relative flex items-start mb-12 timeline-item" data-aos="fade-right" data-aos-delay="400">
+                    <div class="flex-shrink-0 w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                        🎓
+                    </div>
+                    <div class="ml-8 card p-6 flex-grow">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                            <h3 class="text-xl font-bold">Magister Informatyki</h3>
+                            <span class="text-sm text-green-600 font-medium">2020 - 2025</span>
+                        </div>
+                        <h4 class="text-lg text-gray-600 dark:text-gray-400 mb-3">Uniwersytet w Białymstoku</h4>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Ukończone studia magisterskie na kierunku Informatyka. Specjalizacja w obszarze 
+                            programowania aplikacji, algorytmów, sztucznej inteligencji i analizy danych.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">Algorytmy</span>
+                            <span class="tech-tag">Programowanie</span>
+                            <span class="tech-tag">AI</span>
+                            <span class="tech-tag">Data Science</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section-padding cta-section">
+    <div class="container-custom text-center relative z-10">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 font-display text-gray-900 dark:text-white" data-aos="fade-up">
+            Zainteresowany współpracą?
+        </h2>
+        <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="200">
+            Jestem otwarty na nowe projekty i wyzwania. Sprawdź moje portfolio lub skontaktuj się ze mną.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center" data-aos="fade-up" data-aos-delay="400">
+            <a href="{{ url_for('projects') }}" class="btn-primary">
+                <i class="fas fa-folder-open mr-2"></i>
+                Zobacz projekty
+            </a>
+            <a href="{{ url_for('contact') }}" class="btn-secondary">
+                <i class="fas fa-envelope mr-2"></i>
+                Skontaktuj się
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %} 

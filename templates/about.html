@@ -1,0 +1,342 @@
+{% extends "base.html" %}
+
+{% block title %}O mnie - Portfolio{% endblock %}
+{% block description %}Poznaj mnie lepiej - moja historia, pasje i doświadczenie w programowaniu{% endblock %}
+
+{% block extra_head %}
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="section-padding bg-gradient-to-br from-primary-50 via-white to-primary-100 dark:from-dark-900 dark:via-dark-800 dark:to-dark-900">
+    <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Profile Image -->
+            <div class="text-center lg:text-left" data-aos="fade-right">
+                <div class="w-64 h-64 mx-auto lg:mx-0 mb-8 relative">
+                    <div class="w-full h-full rounded-full bg-gradient-to-r from-primary-400 to-primary-600 p-2 animate-pulse-slow">
+                        <div class="w-full h-full rounded-full bg-gray-200 dark:bg-dark-700 flex items-center justify-center">
+                            <i class="fas fa-user text-6xl text-gray-400 dark:text-gray-500"></i>
+                        </div>
+                    </div>
+                    <!-- Floating Icons -->
+                    <div class="absolute -top-4 -right-4 bg-primary-600 text-white p-3 rounded-full animate-float">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="absolute -bottom-4 -left-4 bg-primary-500 text-white p-3 rounded-full animate-float" style="animation-delay: -2s;">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                </div>
+                
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-2 gap-4 max-w-sm mx-auto lg:mx-0">
+                    <div class="text-center card p-4">
+                        <div class="text-2xl font-bold text-primary-600">4+</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-400">Lat doświadczenia</div>
+                    </div>
+                    <div class="text-center card p-4">
+                        <div class="text-2xl font-bold text-primary-600">15+</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-400">Projektów</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Content -->
+            <div data-aos="fade-left">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 font-display">
+                    Cześć, jestem <span class="gradient-text">Mateusz</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl text-gray-600 dark:text-gray-400 mb-6">
+                    Data Scientist & AI Developer w Drtusz
+                </h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                    Od października 2024 pracuję jako Data Scientist w Drtusz - to moja pierwsza komercyjna praca! 
+                    Specjalizuję się w tworzeniu agentów AI, systemach RAG, generowaniu obrazów z wykorzystaniem AI, 
+                    oraz integracji z różnymi LLM i platformami jak Slack.
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://github.com/yourusername" target="_blank" class="btn-primary">
+                        <i class="fab fa-github mr-2"></i>
+                        GitHub
+                    </a>
+                    <a href="{{ url_for('projects') }}" class="btn-secondary">
+                        <i class="fas fa-code mr-2"></i>
+                        Moje projekty
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- My Story Section -->
+<section class="section-padding">
+    <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 font-display" data-aos="fade-up">
+                    Moja <span class="gradient-text">historia</span>
+                </h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400" data-aos="fade-up" data-aos-delay="200">
+                    Jak zaczynałem swoją przygodę z programowaniem
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-16">
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-4">Początki z Data Science</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                        Moja przygoda z programowaniem i data science zaczęła się około 2022 roku, kiedy po raz pierwszy 
+                        spotkałem się z Pythonem i bibliotekami do analizy danych. Pandas, NumPy, Matplotlib - 
+                        każda z nich otwierała przede mną nowe możliwości analizy danych.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Pierwsze projekty to były proste analizy danych z Excela, 
+                        ale szybko zrozumiałem, że data science to nie tylko narzędzie - to sposób odkrywania prawdy ukrytej w danych.
+                    </p>
+                </div>
+                <div class="card p-6 bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900 dark:to-primary-800" data-aos="fade-left">
+                    <i class="fas fa-brain text-4xl text-primary-600 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Samonauka</h4>
+                    <p class="text-gray-700 dark:text-gray-300">Data Science & AI</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">2022-2024</p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-16">
+                <div class="card p-6 bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900 dark:to-primary-800 order-2 md:order-1" data-aos="fade-right">
+                    <i class="fas fa-briefcase text-4xl text-primary-600 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Pierwsza praca</h4>
+                    <p class="text-gray-700 dark:text-gray-300">Data Scientist w Drtusz</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">Python + AI + LLM</p>
+                </div>
+                <div class="order-1 md:order-2" data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-4">Wejście w świat AI</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                        W październiku 2024 otrzymałem swoją pierwszą pracę jako Data Scientist w Drtusz! 
+                        To doświadczenie pokazało mi, jak fascynujące jest tworzenie agentów AI, systemów RAG 
+                        i integracji z różnymi modelami LLM.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Każdego dnia pracuję z nowoczesnymi technologiami AI, tworzę systemy generowania obrazów, 
+                        integruję ze Slackiem i innymi platformami. To jest dopiero początek mojej 
+                        profesjonalnej kariery w świecie sztucznej inteligencji.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Deep Dive -->
+<section class="section-padding bg-gray-50 dark:bg-dark-800">
+    <div class="container-custom">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 font-display" data-aos="fade-up">
+                Moje <span class="gradient-text">umiejętności</span>
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Szczegółowy przegląd technologii, z którymi pracuję na co dzień
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Technical Skills -->
+            <div data-aos="fade-right">
+                <h3 class="text-2xl font-bold mb-8">Umiejętności techniczne</h3>
+                <div class="space-y-6">
+                                         {% set skills = [
+                         {'name': 'Python', 'level': 85, 'years': '2 lata'},
+                         {'name': 'LangChain & RAG', 'level': 80, 'years': '6 miesięcy'},
+                         {'name': 'OpenAI API & LLM', 'level': 85, 'years': '8 miesięcy'},
+                         {'name': 'Flask & FastAPI', 'level': 80, 'years': '1 rok'},
+                         {'name': 'Pandas & Scikit-learn', 'level': 75, 'years': '1.5 roku'},
+                         {'name': 'Docker & Git', 'level': 75, 'years': '1 rok'},
+                         {'name': 'Slack API & Integrations', 'level': 70, 'years': '6 miesięcy'},
+                         {'name': 'Image Generation AI', 'level': 75, 'years': '4 miesiące'}
+                     ] %}
+                    
+                    {% for skill in skills %}
+                    <div class="skill-item">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-medium">{{ skill.name }}</span>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-sm text-gray-500">{{ skill.years }}</span>
+                                <span class="text-sm text-primary-600 font-medium">{{ skill.level }}%</span>
+                            </div>
+                        </div>
+                        <div class="skill-bar bg-gray-200 dark:bg-dark-700 rounded-full h-3" data-level="{{ skill.level }}">
+                            <div class="skill-fill bg-gradient-to-r from-primary-500 to-primary-600 h-3 rounded-full transition-all duration-1000 ease-out" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            
+            <!-- Soft Skills -->
+            <div data-aos="fade-left">
+                <h3 class="text-2xl font-bold mb-8">Umiejętności miękkie</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    {% set soft_skills = [
+                        {'name': 'Rozwiązywanie problemów', 'icon': 'fas fa-puzzle-piece', 'description': 'Analityczne podejście do złożonych wyzwań'},
+                        {'name': 'Praca w zespole', 'icon': 'fas fa-users', 'description': 'Skuteczna współpraca z developerami i biznesem'},
+                        {'name': 'Komunikacja', 'icon': 'fas fa-comments', 'description': 'Jasne przedstawianie koncepcji technicznych'},
+                        {'name': 'Zarządzanie czasem', 'icon': 'fas fa-clock', 'description': 'Efektywne planowanie i realizacja projektów'},
+                        {'name': 'Ciągłe uczenie się', 'icon': 'fas fa-book', 'description': 'Śledzenie najnowszych trendów technologicznych'},
+                        {'name': 'Kreatywność', 'icon': 'fas fa-lightbulb', 'description': 'Innowacyjne podejście do rozwiązań'}
+                    ] %}
+                    
+                    {% for skill in soft_skills %}
+                    <div class="card p-4 text-center hover:scale-105 transition-transform duration-300">
+                        <i class="{{ skill.icon }} text-2xl text-primary-600 mb-3"></i>
+                        <h4 class="font-bold mb-2">{{ skill.name }}</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">{{ skill.description }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Interests & Hobbies -->
+<section class="section-padding">
+    <div class="container-custom">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 font-display" data-aos="fade-up">
+                Poza <span class="gradient-text">programowaniem</span>
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Co robię w wolnym czasie i co mnie inspiruje
+            </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {% set interests = [
+                {'name': 'AI Research', 'icon': 'fas fa-robot', 'description': 'Śledzę najnowsze badania w dziedzinie sztucznej inteligencji i LLM'},
+                {'name': 'Open Source', 'icon': 'fab fa-github', 'description': 'Uczestniczę w projektach open source związanych z data science'},
+                {'name': 'Tech Podcasty', 'icon': 'fas fa-podcast', 'description': 'Słucham podcastów o AI, machine learning i nowych technologiach'},
+                {'name': 'Eksperymenty', 'icon': 'fas fa-flask', 'description': 'Testuję nowe modele AI i frameworki w projektach osobistych'}
+            ] %}
+            
+            {% for interest in interests %}
+            <div class="card p-6 text-center hover:scale-105 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="{{ loop.index * 100 }}">
+                <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="{{ interest.icon }} text-2xl text-primary-600"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">{{ interest.name }}</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                    {{ interest.description }}
+                </p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Values Section -->
+<section class="section-padding bg-gray-50 dark:bg-dark-800">
+    <div class="container-custom">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 font-display text-gray-900 dark:text-white" data-aos="fade-up">
+                Moje <span class="gradient-text">wartości</span>
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Zasady, którymi kieruję się w pracy i życiu
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Value 1: Quality -->
+            <div class="card text-center p-8" data-aos="fade-up" data-aos-delay="100">
+                <div class="value-icon-wrapper">
+                    <i class="fas fa-gem value-icon"></i>
+                </div>
+                <h3 class="value-title">Jakość</h3>
+                <p class="value-description">Dążę do tworzenia solidnych i niezawodnych rozwiązań.</p>
+            </div>
+
+            <!-- Value 2: Innovation -->
+            <div class="card text-center p-8" data-aos="fade-up" data-aos-delay="200">
+                <div class="value-icon-wrapper">
+                    <i class="fas fa-lightbulb value-icon"></i>
+                </div>
+                <h3 class="value-title">Innowacja</h3>
+                <p class="value-description">Ciągle poszukuję nowych, lepszych sposobów rozwiązywania problemów.</p>
+            </div>
+
+            <!-- Value 3: Collaboration -->
+            <div class="card text-center p-8" data-aos="fade-up" data-aos-delay="300">
+                <div class="value-icon-wrapper">
+                    <i class="fas fa-users value-icon"></i>
+                </div>
+                <h3 class="value-title">Współpraca</h3>
+                <p class="value-description">Wierzę, że najlepsze rezultaty osiąga się dzięki pracy zespołowej.</p>
+            </div>
+
+            <!-- Value 4: Growth -->
+            <div class="card text-center p-8" data-aos="fade-up" data-aos-delay="400">
+                <div class="value-icon-wrapper">
+                   <i class="fas fa-chart-line value-icon"></i>
+                </div>
+                <h3 class="value-title">Rozwój</h3>
+                <p class="value-description">Nieustannie się uczę i poszerzam swoje horyzonty.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section-padding">
+    <div class="container-custom text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 font-display" data-aos="fade-up">
+            Sprawdź moje projekty!
+        </h2>
+        <p class="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+            Zobacz konkretne przykłady mojej pracy z AI, Data Science i systemami LLM.
+            Znajdziesz tu również moje profile na GitHub i LinkedIn.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center" data-aos="fade-up" data-aos-delay="400">
+            <a href="{{ url_for('projects') }}" class="btn-primary">
+                <i class="fas fa-code mr-2"></i>
+                Moje projekty
+            </a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank" class="btn-secondary">
+                <i class="fab fa-linkedin mr-2"></i>
+                LinkedIn
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    // Animate skill bars when they come into view
+    document.addEventListener('DOMContentLoaded', function() {
+        const skillSection = document.querySelector('#skills-section');
+        if (skillSection) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const skillBars = entry.target.querySelectorAll('.skill-bar');
+                        skillBars.forEach(bar => {
+                            const level = bar.dataset.level;
+                            const fill = bar.querySelector('.skill-fill');
+                            if (fill) {
+                                setTimeout(() => {
+                                    fill.style.width = level + '%';
+                                }, 300);
+                            }
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            observer.observe(skillSection);
+        }
+    });
+</script>
+{% endblock %} 

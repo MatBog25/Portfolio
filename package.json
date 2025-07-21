@@ -1,0 +1,19 @@
+{
+  "name": "portfolio-flask",
+  "version": "1.0.0",
+  "description": "Modern portfolio built with Flask and Tailwind CSS",
+  "main": "app.py",
+  "scripts": {
+    "build-css": "tailwindcss -i ./static/src/input.css -o ./static/css/style.css --watch",
+    "build-css-prod": "tailwindcss -i ./static/src/input.css -o ./static/css/style.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.5",
+    "@tailwindcss/forms": "^0.5.6",
+    "@tailwindcss/typography": "^0.5.10"
+  },
+  "dependencies": {
+    "alpinejs": "^3.13.2",
+    "aos": "^2.3.4"
+  }
+} 
