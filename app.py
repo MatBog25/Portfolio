@@ -96,18 +96,18 @@ def api_skills():
     skills_data = {
         'current_company': {
             'technologies': [
-                {'name': 'Python', 'level': 85, 'category': 'Data Science'},
-                {'name': 'Flask', 'level': 80, 'category': 'Framework'},
+                {'name': 'Python', 'category': 'Data Science'},
+                {'name': 'Flask', 'category': 'Framework'},
                 {'name': 'Pandas', 'level': 85, 'category': 'Data Science'},
-                {'name': 'Scikit-learn', 'level': 75, 'category': 'Machine Learning'},
-                {'name': 'LangChain', 'level': 80, 'category': 'AI/LLM'},
-                {'name': 'OpenAI API', 'level': 85, 'category': 'AI/LLM'},
-                {'name': 'Docker', 'level': 75, 'category': 'DevOps'},
-                {'name': 'Git', 'level': 80, 'category': 'Tools'},
-                {'name': 'RAG Systems', 'level': 80, 'category': 'AI/LLM'},
-                {'name': 'Slack API', 'level': 70, 'category': 'Integrations'},
-                {'name': 'JavaScript', 'level': 60, 'category': 'Frontend'},
-                {'name': 'ChromaDB', 'level': 75, 'category': 'Vector DB'}
+                {'name': 'Scikit-learn', 'category': 'Machine Learning'},
+                {'name': 'LangChain', 'category': 'AI/LLM'},
+                {'name': 'OpenAI API', 'category': 'AI/LLM'},
+                {'name': 'Docker', 'category': 'DevOps'},
+                {'name': 'Git', 'category': 'Tools'},
+                {'name': 'RAG Systems', 'category': 'AI/LLM'},
+                {'name': 'Slack API', 'category': 'Integrations'},
+                {'name': 'JavaScript', 'category': 'Frontend'},
+                {'name': 'ChromaDB', 'category': 'Vector DB'}
             ]
         }
     }
