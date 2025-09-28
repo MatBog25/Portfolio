@@ -6,15 +6,6 @@ from datetime import datetime
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-secret-key-change-in-production')
 
-# Mail configuration
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
-app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
-
-mail = Mail(app)
-
 @app.route('/')
 def home():
     # Same projects data as in projects route
@@ -98,28 +89,6 @@ def projects():
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
-    if request.method == 'POST':
-        name = request.form.get('name')
-        email = request.form.get('email')
-        message = request.form.get('message')
-        
-        if name and email and message:
-            try:
-                msg = Message(
-                    subject=f'Portfolio Contact: {name}',
-                    sender=app.config['MAIL_USERNAME'],
-                    recipients=[app.config['MAIL_USERNAME']],
-                    body=f'Name: {name}\nEmail: {email}\n\nMessage:\n{message}'
-                )
-                mail.send(msg)
-                flash('Wiadomość została wysłana pomyślnie!', 'success')
-            except Exception as e:
-                flash('Wystąpił błąd podczas wysyłania wiadomości.', 'error')
-        else:
-            flash('Proszę wypełnić wszystkie pola.', 'error')
-        
-        return redirect(url_for('contact'))
-    
     return render_template('contact.html')
 
 @app.route('/api/skills')
