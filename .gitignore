@@ -285,9 +285,6 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# CSS generated files
-static/css/
-
 # IDE
 .vscode/
 .idea/
